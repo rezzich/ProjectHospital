@@ -1,19 +1,22 @@
 public class Payment {
-    void constructor(doctor, department, price) {
+    private String doctor;
+    private String department;
+    private Float price;
+    void constructor(String doctor, String department, Float price) {
         this.doctor = doctor;
         this.department = department;
         this.price = price;
     }
 
-    int calculateTotal() {
+    public float calculateTotal() {
         return this.price;
     }
 
-    boolean processPayment(amount) {
+    public boolean processedPayment(Float amount) {
         if (amount < this.price) {
             console.log("Error: Payment amount is less than the total cost");
             return false;
-        } else {
+        }else {
             console.log("Payment accepted. Thank you for your visit!");
             return true;
         }
