@@ -1,8 +1,23 @@
 public class Department {
-    public void construct(char name, char head, char doctors) {
+
+    private Hospital hospital;
+    private char name;
+    private char head;
+    private char doctors;
+    public Department(char name, char head, char doctors) {
         this.name = name;
         this.head = head;
         this.doctors = doctors;
+    }
+
+    public char getDoctorName(){
+        return name;
+    }
+    public char getHeadName(){
+        return head;
+    }
+    public char getDoctorList(){
+        return doctors;
     }
 
     void addDoctor(char doctor) {
