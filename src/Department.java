@@ -1,10 +1,10 @@
-public class Department {
+import java.lang.reflect.Array;
 
-    private Hospital hospital;
+public class Department {
     private String name;
     private String head;
-    private String doctors;
-    public Department(String name, String head, String doctors) {
+    private Array doctors;
+    public Department(String name, String head, Array doctors) {
         this.name = name;
         this.head = head;
         this.doctors = doctors;
@@ -16,30 +16,17 @@ public class Department {
     public String getHeadName(){
         return head;
     }
-    public String getDoctorList(){
+    public Array getDoctorList(){
         return doctors;
     }
 
-    public void setDoctorname(String name){
+    public void setDoctorName(String name){
         this.name = name;
     }
     public void setHeadName(String head){
         this.head = head;
     }
-    public void setDoctorList(String doctors){
+    public void setDoctorList(Array doctors){
         this.doctors = doctors;
-    }
-
-    void addDoctor(String doctor) {
-        this.doctors.push(doctor);
-    }
-
-    class getDepartmentInfo() {
-        console.log("Department: " + this.name);
-        console.log("Head of Department: " + this.head);
-        console.log("Doctors in Department: ");
-        for(let doctor of this.doctors) {
-            console.log(doctor);
-        }
     }
 }
